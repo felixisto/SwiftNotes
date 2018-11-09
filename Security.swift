@@ -1,4 +1,7 @@
 
+// https://github.com/krzyzanowskim/CryptoSwift
+// installation:
+// pod 'CryptoSwift' OR git submodule add https://github.com/krzyzanowskim/CryptoSwift.git
 import CryptoSwift
 
 let kSecClassValue = NSString(format: kSecClass)
