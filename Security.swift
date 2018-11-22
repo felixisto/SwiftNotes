@@ -171,13 +171,15 @@ class SaltHash
 
 class SHA256Hashing
 {
-    class func hashSHA256(_ data: String) -> String
+    public let value : String
+    
+    init(from data: String)
     {
-        return data.sha256()
+        self.value = data.sha256()
     }
     
-    class func userPassHash(from name: String, password: String, salt: String) -> String
+    init(from data: String, withSalt salt: String)
     {
-        return hashSHA256("\(password).\(name).\(salt)")
+        self.value = hashSHA256("\(data)\(salt)")
     }
 }
